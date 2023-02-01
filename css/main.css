@@ -20,6 +20,10 @@
     border: 0
 }
 
+body {
+    background-color: #171717;
+}
+
 /* =========== scroll bar ============ */
 
 ::-webkit-scrollbar {
@@ -33,4 +37,73 @@
 ::-webkit-scrollbar-thumb {
     background-color: #F9A72B;
     border-radius: 10px;
+}
+
+/*=========================================*/
+
+
+.menu{
+    width: 100%;
+    height: 50px;
+    background-color: #222;
+    font-family: 'Arial';
+}
+.menu ul{
+    text-align: center;
+    list-style: none;
+    position: relative;
+}
+
+.menu ul li{
+    width: 150px;
+    float: left;
+}
+
+.menu a{
+    padding: 15px;
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    background-color: #222;
+    color: #fff;
+}
+
+label[for="bt_menu"]{
+    padding: 5 px;
+    background-color: #222;
+    color: #fff;
+    font-family:'Arial';
+    text-align: left;
+    font-size: 30px;
+    cursor: pointer;
+    
+}
+#bt_menu{
+    display:none;
+}
+label[for="bt_menu"]{
+    display:none;
+
+}
+
+
+@media(max-width:800px){
+    label[for="bt_menu"]{
+        display:block;
+    }
+
+    #bt_menu:checked ~ .menu{
+        margin-left: 0;
+        }
+
+    .menu{
+        margin-top: 5px;
+        margin-left: -100%;
+        transition: all .4s;
+    }
+    .menu ul li{
+        width: 100%;
+        float: none;
+
+    }
 }
